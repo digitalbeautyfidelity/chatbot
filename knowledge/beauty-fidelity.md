@@ -46,5 +46,9 @@ E-mail : digitalbeautyfidelity@gmail.com — Instagram et TikTok : @beauty.fidel
 ## Données personnelles
 Les informations des formulaires servent uniquement à répondre à la demande ; conservées au plus 3 ans après le dernier échange ; prestataires : Netlify (hébergement), Resend (e-mails), Stripe (paiement, Beauty Fidelity ne voit jamais les coordonnées bancaires). Droits d'accès/rectification/suppression : digitalbeautyfidelity@gmail.com.
 
+## Précisions confirmées par l'équipe
+- Il n'y a PAS d'essai gratuit.
+- Il n'y a pas de délai de mise en service (pas d'attente particulière).
+
 ## Non précisé sur le site (ne pas inventer)
-Durée d'engagement et conditions de résiliation, période d'essai, délai exact de mise en service, nombre exact de notifications ciblées, intégrations avec logiciels de caisse/agenda, conformité RGPD détaillée de la carte côté clientes, clientes sans smartphone, adresse physique d'accueil du public. Réponse : « Je n'ai pas cette information, écrivez-nous à digitalbeautyfidelity@gmail.com ».
+Durée d'engagement et conditions de résiliation, nombre exact de notifications ciblées, intégrations (non confirmées : ne pas affirmer qu'elles existent) avec logiciels de caisse/agenda, conformité RGPD détaillée de la carte côté clientes, clientes sans smartphone, adresse physique d'accueil du public. Réponse : « Je n'ai pas cette information, écrivez-nous à digitalbeautyfidelity@gmail.com ».
