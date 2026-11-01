@@ -1,5 +1,5 @@
 import assert from 'node:assert';
-import { sanitize } from './server.js';
+import { sanitize } from './chat-core.js';
 assert.equal(sanitize([]), null);
 assert.equal(sanitize('x'), null);
 assert.deepEqual(sanitize([{ role: 'assistant', content: 'hi' }, { role: 'user', content: 'Quelles formules ?' }]), [{ role: 'user', content: 'Quelles formules ?' }]);
