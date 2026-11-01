@@ -2,7 +2,7 @@ import http from 'node:http';
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { answer } from './chat-core.js';
+import { answer, handoff } from './chat-core.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 // .env minimal (sans dépendance)
@@ -41,7 +41,17 @@ async function chat(req, res) {
   json(res, code, out);
 }
 
+async function handoffRoute(req, res) {
+  if (limited(req.socket.remoteAddress)) return json(res, 429, { error: 'Trop de demandes, réessayez plus tard.' });
+  let body = '';
+  for await (const c of req) { body += c; if (body.length > 30000) return json(res, 413, { error: 'Trop gros' }); }
+  let p; try { p = JSON.parse(body); } catch {}
+  const { code, body: out } = await handoff(p);
+  json(res, code, out);
+}
+
 export const server = http.createServer(async (req, res) => {
+  if (req.method === 'POST' && req.url === '/api/handoff') return handoffRoute(req, res);
   if (req.method === 'POST' && req.url === '/api/chat') return chat(req, res);
   if (req.method !== 'GET') { res.writeHead(405); return res.end(); }
   const p = req.url.split('?')[0];

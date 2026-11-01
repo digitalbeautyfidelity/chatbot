@@ -4,6 +4,6 @@ export default async (req) => {
   if (req.method !== 'POST') return new Response('Method Not Allowed', { status: 405 });
   let msgs;
   try { msgs = (await req.json()).messages; } catch {}
-  const { code, body } = await answer(msgs, process.env.ANTHROPIC_API_KEY);
+  const { code, body } = await answer(msgs, process.env.ANTHROPIC_API_KEY, process.env);
   return new Response(JSON.stringify(body), { status: code, headers: { 'content-type': 'application/json' } });
 };
